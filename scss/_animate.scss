@@ -1,0 +1,336 @@
+/*styling animate page*/
+#animate{
+>div:nth-of-type(1){
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+  padding: 3em;
+  grid-gap: 3em;
+  @include bp-990{
+    grid-template-columns: 1fr;
+  }
+  div{
+    display: block;
+    padding: 9px;
+    max-width: 90%;
+    perspective: 900px;
+    div{
+      box-shadow: 0 20px 27px -20px #000;
+      background-color: white;
+      border-radius: 6px;
+      transform-origin: bottom;
+      transform: rotateX(9deg);
+      transition: transform 400ms;
+      span{
+       display: block;
+       border: 3px solid tomato;
+       border-radius: 50%;
+       width: 16px;
+       padding: 9px;
+       margin: 0 auto;
+      }
+      h2{
+       font-weight: 500;
+       padding: 0 9px;
+       text-align: center;
+      }
+      p{
+       padding: 0 9px 9px 9px;
+       line-height: 1.6em;
+      }
+      a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #007bff;
+        border: 3px solid tomato;
+        border-radius: 3px;
+        padding: 9px;
+        margin: 9px;
+      }
+    }
+    div:hover{
+      transform: rotateX(0deg);
+    }
+  }
+  >div:nth-child(1){
+    //display: none;
+  }
+  >div:nth-child(2){
+
+  }
+  >div:nth-child(3){
+    //display: none;
+  }
+}
+>div:nth-of-type(2){
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3em;
+  padding: 3em;
+  @include bp-990{
+  grid-template-columns: 1fr;
+  }
+>div:first-child{
+  perspective: 900px;
+    div{
+      background-color: #fff;
+      padding: 9px;
+      border-radius: 3px;
+      box-shadow: 0 20px 27px -20px;
+      form{
+        textarea{
+          display: block;
+          border: none;
+          font-size: 1em;
+          font-weight: 300;
+          outline: none;
+          width: 100%;
+          line-height: 25px;
+          background-color: #dc3545;
+          color: white;
+          border-radius: 3px;
+      }
+        input{
+          display: block;
+          border: none;
+          font-size: 1em;
+          font-weight: 300;
+          outline: none;
+          width: 100%;
+          line-height: 25px;
+          background-color: transparent;
+          padding: 9px 0;
+          margin: 9px 0;
+          border-bottom: 3px solid #333;
+        }
+        button{
+          display: block;
+          border: none;
+          font-size: 1em;
+          font-weight: 300;
+          outline: none;
+          width: 100%;
+          padding: 9px;
+          margin: 9px 0;
+          border-radius: 3px;
+          color: white;
+          background-color: #dc3545;
+          text-shadow: 3px 3px 3px #444;
+          box-shadow: 0 13px 22px -9px #444;
+          cursor: pointer;
+        }
+        button:hover{
+          text-shadow: none;
+          box-shadow: none;
+        }
+      }
+    }
+  .animate{
+    animation: fadeOut 3s;
+   }
+   @keyframes fadeOut{
+     0%{
+       transform: rotateX(0deg) translateY(0px) scale(1);
+     }
+     9%{
+      transform: rotateX(60deg) translateY(0px) scale(1);
+     }
+     30%,39%{
+       transform: rotateX(60deg) translateY(-900px) scale(0);
+     }
+     90%{
+       transform: rotateX(30deg) translateY(0px)
+       scale(1);
+     }
+     100%{
+        transform: rotateX(0deg) translateY(0px) scale(1);
+     }
+   }
+  }
+>div:last-child{
+  //display: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(3000px);
+  div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    div{
+      border-radius: 9px;
+      box-shadow: 0 13px 22px -9px #444;
+      background-color: blue;
+      form{
+        input{
+          display: block;
+          border: none;
+          border-radius: 3px;
+          outline: none;
+          padding: 9px;
+          margin: 9px;
+          font-size: 1em;
+          font-weight: 300;
+        }
+          span{
+          display: block;
+          text-align: center;
+          font-size: 1em;
+          padding: 9px;
+          background-color: #dc3545;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+   }
+   div:first-child{
+    div{
+      //display: none;
+      transform: rotateY(0deg);
+    }
+   }
+   div:last-child{
+    div{
+      //background-color: green;
+      transform: translate3d(0px,0px,0px) rotateX(-90deg);
+    }
+   }
+  }
+}
+>div:nth-of-type(3){
+  display: grid;
+  grid-template-columns: 1fr minmax(460px, 600px) 1fr;
+  div{
+    header{
+      border-bottom: 2px solid #bababa;
+      padding: 9px;
+      background-color: white;
+      text-align: center;
+      span{
+        padding: 9px;
+        border-radius: 50%;
+        background-color: #bababa;
+        display: inline-block;
+        cursor: pointer;
+      }
+      span:first-child{
+        background-color: tomato;
+      }
+    }
+    div{
+      position: relative;
+      transform-style: preserve-3d;
+      perspective: 900px;
+      div{
+        width: 100%;
+        box-shadow: 2px 20px 27px -8px #333;
+        background-color: white;
+        margin-bottom: 3em;
+        animation-name: none;
+        animation-fill-mode: forwards;
+        animation-duration: 900ms;
+        form{
+          display: grid;
+          place-items: center;
+          padding-bottom: 3em;
+          label{
+          font-size: 2em;
+          color: tomato;
+          text-align: center;
+          line-height: 3em;
+          }
+          input{
+          display: block;
+          min-width: 360px;
+          line-height: 2em;
+          border-radius: 3px;
+          outline: none;
+          margin: 19px 0;
+          font-size: 1em;
+          border: 3px solid #bababa;
+          }
+          button{
+            display: block;
+            min-width: 369px;
+            line-height: 3em;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            background-color: tomato;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+          }
+          p{
+           font-size: 1.3em;
+           text-align: center;
+           color: #bab;
+          }
+          span{
+            text-transform: uppercase;
+            color: white;
+            line-height: 2em;
+            background-color: tomato;
+            border-radius: 3px;
+            cursor: pointer;
+            outline: none;
+            padding: 6px;
+            font-size: 0.9em;
+            text-align: center;
+            min-width: 133px;
+          }
+        }
+      }
+      .slideDown{
+        animation-name: slideDown;
+      }
+      @keyframes slideDown{
+        0%{
+         transform: scale(1) translateY(0);
+        }
+        99%{
+          transform: scale(1) translateY(150%);
+        }
+        100%{
+          transform: scale(0) translateY(150%);
+        }
+       }
+      #second-body-model{
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-name: none;
+        animation-fill-mode: forwards;
+        animation-duration: 900ms;
+        transform-origin: top;
+        transform: scale(0) rotateX(-90deg);
+      }
+      .fadeIn{
+        animation-name: fadeIn;
+      }
+      @keyframes fadeIn{
+        0%{
+          transform: scale(0) rotateX(-90deg);
+        }
+        9%{
+          transform: scale(1) rotateX(-90deg);
+        }
+        100%{
+          transform: scale(1) rotateX(0deg);
+        }
+      }
+      div:nth-of-type(3){
+        display: none;
+        position: absolute;
+        top: 160px;
+        background-color: yellow;
+      }
+    }
+  }
+ }
+
+}

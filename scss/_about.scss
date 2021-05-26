@@ -1,0 +1,92 @@
+#about{
+  >div:nth-child(1){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  div{
+    article{
+      padding: 3em;
+      header{
+        h2{
+        display: inline-block;
+        font-size: 2em;
+        color: white;
+        text-shadow: 3px 3px #333;
+        }
+        button{
+         visibility: visible;
+         opacity: 1;
+         display: inline-block;
+         padding: 0 .9em;
+         margin: 0 0 0 3em;
+         color: white;
+         cursor: pointer;
+         border: none;
+         border-radius: 3px;
+         line-height: 2em;
+         outline: none;
+         font-size: 19px;
+         background-color: MediumSeaGreen;
+         box-shadow: 0 16px 30px -9px #333;
+         transition: 9s;
+        }
+        button:hover{
+          box-shadow: 0 0 30px -9px #333;
+        }
+      }
+      p{
+
+      }
+    }
+  }
+  div{
+      img{
+        border-radius: 3px;
+        border: 3px solid MediumSeaGreen;
+        box-shadow: 0 0 30px -9px;
+        padding: 9px;
+        margin: 3em;
+        width: 15em;
+        cursor: pointer;
+      }
+      img:hover{
+          box-shadow: 1px 0 0px -9px;
+    }
+  }
+}
+>div:nth-child(2){
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  div{
+    table{
+      thead{
+        th{
+         border: 3px solid #3636;
+         padding: 9px;
+        }
+      }
+      tbody{
+        td{
+        border: 3px solid #3636;
+        padding: 9px;
+        line-height: 22px;
+        outline: none;
+        }
+      }
+    }
+   }
+  }
+  >div:nth-child(3){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div{
+      padding: 0 3em;
+      max-width: 26em;
+      p{
+        padding: 3px;
+      }
+    }
+  }
+}

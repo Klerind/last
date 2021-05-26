@@ -1,0 +1,74 @@
+  /*styling index page*/
+#index{
+    width: 73%;
+    margin: 0 auto;
+   div{
+    margin: 9px 0;
+  }
+   div div{
+    border: 3px solid black;
+    margin: 9px 0;
+  }
+   div:nth-child(1) div:nth-child(3){
+    padding: 9px;
+    text-align: center;
+    font-size: 3em;
+  }
+   div div h2{
+    font-size: 3em;
+    text-align: center;
+  }
+   div div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+  }
+    div div:nth-child(2) button{
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background-color: #66CDAA;
+    border-radius: 6px;
+    border-color: green;
+    border: 3px solid transparent;
+    line-height: 2em;
+    margin: 9px 0;
+    box-shadow: 9px 22px 22px -9px #333;;
+  }
+   div:nth-child(2) div:nth-child(3){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 9px 0;
+    perspective: 900px;
+  }
+   div:nth-child(2) div:nth-child(3) img{
+    padding: 9px;
+    box-shadow: 0 20px 27px -20px #000;
+  }
+   div:nth-child(2) div:nth-child(3) img:hover{
+   cursor: pointer;
+   transform-origin: bottom;
+   transform: rotateX(18deg);
+   transition: transform 600ms;
+  }
+  >div:nth-child(3) div{
+   img{
+    margin: 18px 0;
+    cursor: pointer;
+  }
+   img:hover{
+   box-shadow: 0 20px 27px -20px #000;
+ }
+}
+div:nth-child(4){
+ div:nth-child(2){
+  form{
+    padding: 22px 0;
+   }
+  }
+ div:nth-child(3){
+  padding: 1em;
+  }
+}
+
+}

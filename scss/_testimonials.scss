@@ -1,0 +1,40 @@
+#testimonials{
+  >div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3em;
+  padding: 3em;
+  @include bp-990{
+    grid-template-columns: 1fr;
+  }
+  div{
+    padding: 9px;
+    background-color: white;
+    box-shadow: 0 20px 27px -20px #000;
+    border-radius: 6px;
+    transform-origin: bottom;
+    transform: rotateX(9deg);
+    span{
+      display: block;
+      border: 3px solid tomato;
+      border-radius: 50%;
+      padding: 9px;
+      margin: 0 auto;
+      width: 16px;
+    }
+    h2{
+      font-weight: 500;
+      padding: 0 9px;
+      text-align: center;
+    }
+    h3{
+      padding: 0 9px 9px 9px;
+      line-height: 1.6em;
+      text-align: center;
+    }
+    h4{
+     @extend h3;
+    }
+   }
+  }
+}

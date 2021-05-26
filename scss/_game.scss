@@ -1,0 +1,224 @@
+#game{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: 33em;
+div{
+  perspective: 3000px;
+  position: relative;
+  .controler::before{
+
+  }
+  .controler{
+    position: absolute;
+    left: 6em;
+    bottom: 90px;
+    width: 72px;
+    height: 160px;
+    border-radius: 9px;
+    background-color: #ADD8E6;
+    transform-origin: bottom;
+    transform: rotateX(50deg) rotateY(1deg) rotateZ(60deg);
+    .assets::before{
+
+    }
+    .assets{
+      border: 9px solid black;
+      border-radius: 9px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      height: 150px;
+      div::before{
+
+      }
+      div{
+          position: relative;
+          width: 56px;
+          height: 151px;
+        span:nth-child(1)::before{
+          content: '1';
+          padding: 3px 7px;
+          margin: 3px;
+          border-radius: 50%;
+          background-color: yellow;
+          color: yellow;
+          cursor: pointer;
+         }
+         span:nth-child(2)::before{
+         content: '1';
+         background-color: #333;
+         margin: 3px;
+         padding: 4px 7px;
+         border-radius: 50%;
+         color: white;
+         font-size: 9px;
+         cursor: pointer;
+           }
+          span:nth-child(3)::before{
+          content: '4';
+           @extend span:nth-child(2)::before;
+           }
+           span:nth-child(4)::before{
+           content: '7';
+            @extend span:nth-child(2)::before;
+            }
+            span:nth-child(5)::before{
+              position: absolute;
+              bottom: -19px;
+              left: 3px;
+              content: '-';
+              @extend span:nth-child(2)::before;
+             }
+        span:first-child{
+            color: #333;
+            }
+        span{
+          background-color: #333;
+          color: white;
+          font-size: 9px;
+          cursor: pointer;
+        }
+        span:nth-child(5){
+        position: relative;
+        top: 3px;
+        padding: 3px 24px;
+        margin: 3px 0;
+        border-radius: 50%;
+        }
+        span:last-child{
+        position: relative;
+        top: 19px;
+        padding: 3px 24px;
+        border-radius: 50%;
+        }
+        span:nth-child(1)::after{
+           @extend span:nth-child(1)::before;
+           background-color: red;
+           color: red;
+        }
+        span:nth-child(2)::after{
+          content: '3';
+           @extend span:nth-child(2)::before;
+        }
+        span:nth-child(3)::after{
+          content: '6';
+           @extend span:nth-child(2)::before;
+        }
+        span:nth-child(4)::after{
+          content: '9';
+           @extend span:nth-child(2)::before;
+        }
+        span:nth-child(5)::after{
+          position: absolute;
+          bottom: -19px;
+          left: 28px;
+          content: '+';
+           @extend span:nth-child(2)::before;
+        }
+      }
+      div::after{
+       position: absolute;
+       right: -23px;
+       bottom: -8px;
+       content: '';
+       padding: 9px;
+       height: 150px;
+       background-color: black;
+       transform-origin: left;
+       transform: rotateY(44deg);
+       clip-path: polygon(-6.18% -2.76%, 65.8% -3.68%, 105.99% 5.47%, 86.31% 24.11%, 61.51% 56.94%, 92.58% 75.42%, 82.93% 98.94%, 0.89% 101.75%);
+      }
+    }
+    .assets::after{
+
+    }
+  }
+  .controler::after{
+
+  }
+  .tv::before{
+    position: absolute;
+    left: 12px;
+    top: 0;
+    content: '';
+    background-color: black;
+    width: 416px;
+    border-radius: 9px;
+    padding: 17px;
+    clip-path: polygon(-0.84% -30.87%, 102.36% -43.45%, 103.72% 20.61%, -6.1% 10.93%);
+  }
+  .tv{
+    position: relative;
+    width: 430px;
+    height: 293px;
+    margin-top: 3em;
+    transform-origin: bottom;
+    transform: rotateY(-30deg);
+    //background-color: blue;
+    .assets::before{
+      position: absolute;
+      left: -14px;
+      bottom: -43px;
+      content: '';
+      padding: .9em;
+      width: 401px;
+      border-radius: 6px;
+      background-color: black;
+    }
+    .assets{
+      width: 401px;
+      height: 257px;
+      border-radius: 23px;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      border: .9em solid black;
+      //border-bottom-width: .6em;
+      div:before{
+        position: absolute;
+        left: 68px;
+        bottom: -43px;
+        content: '';
+        padding: 5px;
+        width: 15px;
+        border-radius: 30px;
+        background-color: yellow;
+      }
+      div{
+        width: 382px;
+        height: 236px;
+        border-radius: 0px;
+        border: .6em solid white;
+        border-style: inset;
+        background-color: #696969;
+      }
+      div:after{
+        position: absolute;
+        left: 173px;
+        bottom: -39px;
+        content: '';
+        padding: 3px;
+        border-radius: 50%;
+        background-color: blue;
+      }
+    }
+    .assets::after{
+      position: absolute;
+      left: 116px;
+      bottom: -31px;
+      content: '';
+      padding: 3px;
+      border-radius: 50%;
+      background-color: red;
+    }
+  }
+  .tv::after{
+    position: absolute;
+    right: -86px;
+    bottom: -28px;
+    content: '';
+    padding: 3em;
+    background-color: black;
+    height: 228px;
+    clip-path:     polygon(-1.05% 2.63%, 43.67% 2.88%, 47.88% 19.9%, 98.68% 25.49%, 101.56% 54.37%, 55.61% 62.5%, 56.17% 86.35%, 7.04% 97.66%);
+  }
+ }
+}

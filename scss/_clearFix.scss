@@ -1,0 +1,8 @@
+.clearFix:after{
+content:",";
+display:block;
+visibility:hidden;
+clear:both;
+height:0;}
+
+.clearFix{display:inline-block;}

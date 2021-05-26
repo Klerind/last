@@ -1,0 +1,35 @@
+@mixin bp-990 {
+   @media only screen and (max-width: 990px){
+      @content;
+   }
+}
+@mixin bp-770 {
+   @media only screen and (max-width: 770px){
+      @content;
+   }
+}
+@mixin bp-520 {
+   @media only screen and (max-width: 520px){
+      @content;
+   }
+}
+@mixin text-shadowFourValues($firstValue,$secondValue,$thirdValue,$color) {
+        text-shadow: $firstValue $secondValue $thirdValue $color;
+-webkit-text-shadow: $firstValue $secondValue $thirdValue $color;
+      -o-text-shadow: $firstValue $secondValue $thirdValue $color;
+    -moz-text-shadow: $firstValue $secondValue $thirdValue $color;
+}
+
+@mixin text-shadowFiveValues($firstValue,$secondValue,$thirdValue,$fourthValue,$color) {
+        text-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+-webkit-text-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+      -o-text-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+    -moz-text-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+}
+
+@mixin box-shadowFiveValues($firstValue,$secondValue,$thirdValue,$fourthValue,$color) {
+        box-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+-webkit-box-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+      -o-box-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+    -moz-box-shadow: $firstValue $secondValue $thirdValue $fourthValue $color;
+}

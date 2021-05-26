@@ -1,0 +1,74 @@
+#contact{
+main{
+  display: grid;
+  justify-content: space-around;
+  perspective: 900px;
+  h1{
+    color: #2F4F4F;
+    font-size: 3em;
+    font-family: monospace;
+    margin-left: .1em;
+  }
+  h2{
+    @extend h1;
+    font-size: 1.6em;
+    margin: -.9em 0 1.3em .3em;
+  }
+  form{
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 20px 27px -20px;
+    animation-duration: 3s;
+    label{
+    padding: 9px;
+    text-transform: uppercase;
+    font-size: 100%;
+    background: transparent;
+    }
+    input{
+     outline: none;
+     width: 90%;
+     border: none;
+     padding: 9px;
+     text-transform: capitalize;
+     font-size: .9em;
+     font-family: inherit;
+     border-radius: 3px;
+     color: #000;
+     margin: 9px;
+    }
+    textarea{
+      @extend input;
+    }
+    input[type="submit"]{
+      background-color: white;
+      box-shadow: 2px 2px 8px -2px #333;
+      cursor: pointer;
+      transition: all 800ms;
+    }
+    input[type="submit"]:hover{
+      background-color: tomato;
+      color: white;
+    }
+  }
+  @keyframes fadeOut{
+    0%{
+      transform: rotateX(0deg) translateY(0px) scale(1);
+    }
+    9%{
+     transform: rotateX(60deg) translateY(0px) scale(1);
+    }
+    39%{
+    //  transform: rotateX(60deg) translateY(-900px) scale(0);
+    }
+    90%{
+      //transform: rotateX(30deg) translateY(0px) scale(1);
+    }
+    100%{
+       //transform: rotateX(0deg) translateY(0px) scale(1);
+    }
+  }
+ }
+}
