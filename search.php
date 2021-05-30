@@ -90,5 +90,5 @@ article>div{
      }
    }
   ?>
-<script src="js/search.js"></script>
+<script defer="true" src="js/search.js"></script>
 <?php include_once "footer.php" ?>

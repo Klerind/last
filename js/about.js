@@ -1,33 +1,31 @@
 //Getting data with XmlhttpRequest and printing them to the page
 var pageNumber = 1;
 function showContent() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function () {
-   var object = JSON.parse(this.responseText);
-   let string = "";
-   for (var i = 0; i < object.length; i++ ) {
-     string += "<p>"+object[i].name+" is a "+object[i].species+" that likes ";
-     for (var ii = 0; ii < object[i].foods.likes.length; ii++) {
-       if (ii === 0) {
-        string += object[i].foods.likes[ii];
-       }else {
-         string += " and "+object[i].foods.likes[ii];
-       }
-     }
-     string += " and dislikes ";
-     for (var ii = 0; ii < object[i].foods.dislikes.length; ii++) {
-       if (ii === 0) {
-        string += object[i].foods.dislikes[ii];
-       }else {
-         string += " and "+object[i].foods.dislikes[ii];
-       }
-     }
-     string += ".</p><hr>";
-   }
-   document.querySelector("#about div div article").innerHTML += string;
+  function getData(data) {
+    var object = JSON.parse(data.responseText);
+    let string = "";
+    for (var i = 0; i < object.length; i++ ) {
+      string += "<p>"+object[i].name+" is a "+object[i].species+" that likes ";
+      for (var ii = 0; ii < object[i].foods.likes.length; ii++) {
+        if (ii === 0) {
+         string += object[i].foods.likes[ii];
+        }else {
+          string += " and "+object[i].foods.likes[ii];
+        }
+      }
+      string += " and dislikes ";
+      for (var ii = 0; ii < object[i].foods.dislikes.length; ii++) {
+        if (ii === 0) {
+         string += object[i].foods.dislikes[ii];
+        }else {
+          string += " and "+object[i].foods.dislikes[ii];
+        }
+      }
+      string += ".</p><hr>";
+    }
+    document.querySelector("#about div div article").innerHTML += string;
   }
-  xhttp.open("GET","json/animals-"+pageNumber+".json",true);
-  xhttp.send();
+  getAjaxRequest("json/animals-"+pageNumber+".json",getData);
   pageNumber++;
   if (pageNumber > 3) {
     document.querySelector("#about div div header button").style = "opacity: 0; visibility: hidden";
@@ -78,9 +76,7 @@ document.querySelector("#about div:nth-child(2) button:nth-of-type(3)").addEvent
          objects[i] = php_data;
    }
    const jsonData = JSON.stringify(objects);
-   const xhttp = new XMLHttpRequest();
-   xhttp.open("GET","cms/ajax_data.php?data="+jsonData,true);
-   xhttp.send();
+   sendAjaxRequest("cms/ajax_data.php",jsonData);
 });
 //showing data to new table
 document.querySelector("#about div:nth-child(2) button:nth-of-type(4)").addEventListener("click",function(){

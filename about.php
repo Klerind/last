@@ -65,5 +65,5 @@
     </div>
   </div>
 </section>
-<script src="js/about.js"></script>
+<script defer="true" src="js/about.js"></script>
 <?php include_once "footer.php" ?>

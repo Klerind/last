@@ -86,31 +86,16 @@ function buttonColors(data){
 }
 //show info with json when a button is clicked
 function loadInformation(address) {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function () {
-    if (this.status === 200 && this.readyState === 4) {
-      const container = document.querySelector("div:nth-child(4) div:nth-child(3)");
-      container.style.padding = "9em";
-      window.scrollTo({
-        top: 1230,
-        left:0,
-        behavior:"smooth"
+  function getData(data) {
+    const container = document.querySelector("div:nth-child(4) div:nth-child(3)");
+    container.style.padding = "9em";
+    window.scrollTo({
+       top: 1230,
+       left:0,
+       behavior:"smooth"
       });
-      container.style.padding = "1em";
-      container. innerHTML = this.responseText;
-    }
-  }
-  xhttp.open("GET","ajax/"+address+".txt",true);
-  xhttp.send();
-}/*
-window.addEventListener("scroll",() => {
-  console.log("window height: "+window.scrollY+window.innerHeight);
-  console.log("window width: "+window.innerWidth);
-});*/
-let tringa;
-const call = new XMLHttpRequest();
-   call.onload = function () {
-     tringa = JSON.parse(this.responseText);
-   }
-call.open("GET","php/test.php",true);
-call.send();
+     container.style.padding = "1em";
+     container.innerHTML = data.responseText;
+ }
+getAjaxRequest("ajax/"+address+".txt",getData);
+}

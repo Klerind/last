@@ -20,5 +20,5 @@
 
   </main>
 </section>
-<script src="js/contact.js"></script>
+<script defer="true" src="js/contact.js"></script>
 <?php include_once "footer.php" ?>

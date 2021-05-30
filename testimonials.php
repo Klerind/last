@@ -3,5 +3,5 @@
   <div>
   </div>
 </section>
-<script src="js/testimonials.js"></script>
+<script defer="true" src="js/testimonials.js"></script>
 <?php include_once "footer.php" ?>

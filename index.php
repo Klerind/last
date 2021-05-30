@@ -54,5 +54,5 @@
      <div></div>
    </div>
 </section>
-<script src="js/index.js"></script>
+<script defer="true" src="js/index.js"></script>
 <?php include_once "footer.php" ?>

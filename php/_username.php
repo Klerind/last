@@ -1,5 +1,5 @@
 <?php
-$search = $_REQUEST['search'];
+$search = $_REQUEST['data'];
 $search = strtolower($search);
 include_once "dbConnection.php";
 if ($search === "") {

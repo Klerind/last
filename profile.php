@@ -84,5 +84,5 @@
   <h2> |Convert text file to json</h2>
 </div>
 </section>
-<script src="js/profile.js"></script>
+<script defer="true" src="js/profile.js"></script>
 <?php include_once "footer.php" ?>

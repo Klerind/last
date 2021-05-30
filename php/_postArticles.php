@@ -2,7 +2,7 @@
 //post articles to blog page
   include 'dbConnection.php';
   //include 'viewusers.php';
-  $sqli_articles_command = "SELECT * FROM article ORDER BY id DESC LIMIT ".$_GET['startFrom'].",3;";
+  $sqli_articles_command = "SELECT * FROM article ORDER BY id DESC LIMIT ".$_REQUEST['data'].",3;";
   $stmt = mysqli_stmt_init($dbConnection);
   mysqli_stmt_prepare($stmt,$sqli_articles_command);
   mysqli_stmt_execute($stmt);

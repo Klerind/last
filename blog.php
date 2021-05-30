@@ -6,5 +6,5 @@
   </main>
   <aside>ana e djatht</aside>
 </section>
-<script src="js/blog.js"></script>
+<script defer="true" src="js/blog.js"></script>
 <?php include_once "footer.php" ?>
