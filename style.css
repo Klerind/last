@@ -551,36 +551,11 @@ body {
       top: 160px;
       background-color: yellow; }
 
-#testimonials > div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3em;
-  padding: 3em; }
-  @media only screen and (max-width: 990px) {
-    #testimonials > div {
-      grid-template-columns: 1fr; } }
-  #testimonials > div div {
-    padding: 9px;
-    background-color: white;
-    box-shadow: 0 20px 27px -20px #000;
-    border-radius: 6px;
-    transform-origin: bottom;
-    transform: rotateX(9deg); }
-    #testimonials > div div span, #testimonials > div #blog main article > div a, #blog main #testimonials > div article > div a {
-      display: block;
-      border: 3px solid tomato;
-      border-radius: 50%;
-      padding: 9px;
-      margin: 0 auto;
-      width: 16px; }
-    #testimonials > div div h2 {
-      font-weight: 500;
-      padding: 0 9px;
-      text-align: center; }
-    #testimonials > div div h3, #testimonials > div div h4 {
-      padding: 0 9px 9px 9px;
-      line-height: 1.6em;
-      text-align: center; }
+#testimonials table tbody tr td:nth-child(5), #testimonials body table tbody tr td:nth-child(6) {
+  color: blue;
+  cursor: pointer; }
+#testimonials #add-client-form {
+  display: none; }
 
 #profile {
   display: grid;
