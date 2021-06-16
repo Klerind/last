@@ -17,9 +17,14 @@ function reset() {
 };
 //Challenge two: Cat Generator
 let x = 1;
+
 function generateCat(){
+  window.scrollTo({
+    top: allButtons[3].offsetTop - 16,
+    behavior:"smooth"
+  });
  if (x <= 6) {
-  let img = document.createElement("img");
+  const img = document.createElement("img");
   img.setAttribute("src","images/thumbnails/Thinking-of-getting-a-cat_2_20.png");
   img.setAttribute("width","290");
   img.setAttribute("height","190");
@@ -90,7 +95,7 @@ function loadInformation(address) {
     const container = document.querySelector("div:nth-child(4) div:nth-child(3)");
     container.style.padding = "9em";
     window.scrollTo({
-       top: 1230,
+       top: allButtons[6].offsetTop - 15,
        left:0,
        behavior:"smooth"
       });

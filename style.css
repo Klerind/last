@@ -12,7 +12,8 @@ body {
   margin: 0;
   padding: 0;
   background-image: linear-gradient(45deg, #ADD8E6, #F0FFFF, #F0F8FF, #E0FFFF, #e1e1e1, #E6E6FA, #F5F5F5);
-  background-size: 400%; }
+  background-size: 400%;
+  min-height: 100vh; }
   body #header nav {
     display: flex;
     background-color: #f8f9fa; }
@@ -160,18 +161,18 @@ body {
 #index {
   width: 73%;
   margin: 0 auto; }
-  #index div {
-    margin: 9px 0; }
+  #index div h2 {
+    font-size: 1.3em;
+    text-align: center;
+    border: 3px solid #66CDAA;
+    padding: 9px 0; }
   #index div div {
-    border: 3px solid black;
+    border: 3px solid #66CDAA;
     margin: 9px 0; }
   #index div:nth-child(1) div:nth-child(3) {
     padding: 9px;
     text-align: center;
     font-size: 3em; }
-  #index div div h2 {
-    font-size: 3em;
-    text-align: center; }
   #index div div:nth-child(2) {
     display: flex;
     justify-content: space-around; }
@@ -185,7 +186,7 @@ body {
     border: 3px solid transparent;
     line-height: 2em;
     margin: 9px 0;
-    box-shadow: 9px 22px 22px -9px #333; }
+    box-shadow: 0 6px 9px -6px #333333; }
   #index div:nth-child(2) div:nth-child(3) {
     display: flex;
     flex-wrap: wrap;
@@ -210,66 +211,49 @@ body {
   #index div:nth-child(4) div:nth-child(3) {
     padding: 1em; }
 
-#about > div:nth-child(1) {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-  #about > div:nth-child(1) div article {
-    padding: 3em; }
-    #about > div:nth-child(1) div article header h2 {
-      display: inline-block;
-      font-size: 2em;
-      color: white;
-      text-shadow: 3px 3px #333; }
-    #about > div:nth-child(1) div article header button {
-      visibility: visible;
-      opacity: 1;
-      display: inline-block;
-      padding: 0 .9em;
-      margin: 0 0 0 3em;
-      color: white;
-      cursor: pointer;
-      border: none;
-      border-radius: 3px;
-      line-height: 2em;
-      outline: none;
-      font-size: 19px;
-      background-color: MediumSeaGreen;
-      box-shadow: 0 16px 30px -9px #333;
-      transition: 9s; }
-    #about > div:nth-child(1) div article header button:hover {
-      box-shadow: 0 0 30px -9px #333; }
-  #about > div:nth-child(1) div img {
-    border-radius: 3px;
-    border: 3px solid MediumSeaGreen;
-    box-shadow: 0 0 30px -9px;
-    padding: 9px;
-    margin: 3em;
-    width: 15em;
+#about main h2, #about main form {
+  text-align: center; }
+#about main form {
+  text-align: center; }
+  #about main form input, #about main body #header nav form button, body #header nav #about main form button, #about main body #header form select, body #header #about main form select, #about #contact main form textarea, #contact #about main form textarea {
+    text-transform: capitalize;
+    border: none;
+    border-radius: .3em;
+    padding: .6em;
+    margin: .3em;
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 1.3em; }
+  #about main form button {
+    border: none;
+    border-radius: .3em;
+    padding: .6em;
+    margin: 1em;
+    background-color: lightblue;
+    text-transform: capitalize;
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 1.3em;
     cursor: pointer; }
-  #about > div:nth-child(1) div img:hover {
-    box-shadow: 1px 0 0px -9px; }
-#about > div:nth-child(2) {
+#about main #cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-  #about > div:nth-child(2) div table thead th {
-    border: 3px solid #3636;
-    padding: 9px; }
-  #about > div:nth-child(2) div table tbody td {
-    border: 3px solid #3636;
-    padding: 9px;
-    line-height: 22px;
-    outline: none; }
-#about > div:nth-child(3) {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-  #about > div:nth-child(3) div {
-    padding: 0 3em;
-    max-width: 26em; }
-    #about > div:nth-child(3) div p {
-      padding: 3px; }
+  #about main #cards div {
+    min-width: 18em;
+    max-width: 21em;
+    padding: .9em;
+    margin: .9em;
+    background-color: white;
+    box-shadow: 0 20px 27px -20px #000;
+    border-radius: 6px;
+    transform-origin: bottom;
+    transform: rotateX(9deg); }
+    #about main #cards div span, #about #blog main #cards article > div a, #blog #about main #cards article > div a {
+      display: block;
+      padding: .3em;
+      margin: .3em;
+      border-bottom: 0.1em solid lightblue; }
 
 #contact main {
   display: grid;

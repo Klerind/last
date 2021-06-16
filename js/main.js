@@ -1,5 +1,6 @@
 //global variables
 const forms = document.forms;
+const allButtons = document.querySelectorAll('button');
 function saveComment (thisComment) {
   let commentAndId = [];
   commentAndId.push(thisComment.form[0].value);

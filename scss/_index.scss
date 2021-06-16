@@ -2,21 +2,20 @@
 #index{
     width: 73%;
     margin: 0 auto;
-   div{
-    margin: 9px 0;
+   div h2{
+    font-size: 1.3em;
+    text-align: center;
+    border: 3px solid #66CDAA;
+    padding: 9px 0;
   }
    div div{
-    border: 3px solid black;
+    border: 3px solid #66CDAA;
     margin: 9px 0;
   }
    div:nth-child(1) div:nth-child(3){
     padding: 9px;
     text-align: center;
     font-size: 3em;
-  }
-   div div h2{
-    font-size: 3em;
-    text-align: center;
   }
    div div:nth-child(2){
     display: flex;
@@ -32,7 +31,7 @@
     border: 3px solid transparent;
     line-height: 2em;
     margin: 9px 0;
-    box-shadow: 9px 22px 22px -9px #333;;
+    box-shadow: 0 6px 9px -6px #333333;;
   }
    div:nth-child(2) div:nth-child(3){
     display: flex;

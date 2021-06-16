@@ -1,9 +1,7 @@
 <?php include_once "header.php"; ?>
 <section id="index">
   <div>
-     <div>
        <h2>Challenge 1: Your age in days.</h2>
-     </div>
      <div>
        <button onclick="clickMe()" type="button" name="button">Click me</button>
        <button onclick="reset()" type="button" name="button">reset</button>
@@ -12,9 +10,7 @@
    </div>
 
    <div>
-     <div>
        <h2>Challenge 2: Cat Generator.</h2>
-     </div>
      <div>
        <button onclick="generateCat()" type="button" name="button">Generate Cat</button>
      </div>
@@ -22,9 +18,7 @@
    </div>
 
    <div>
-     <div>
        <h2>Challenge 3: Rock, Paper, Scissors.</h2>
-     </div>
      <div>
        <img id="img" class="remove" onclick="rockPaperScissors(this)" src="svg/rock.svg" alt="rock">
        <img class="remove" onclick="rockPaperScissors(this)" src="svg/paper.svg" alt="paper">
@@ -33,9 +27,7 @@
    </div>
 
    <div>
-     <div>
        <h2>Challenge 4: Change the Color of All buttons.</h2>
-     </div>
      <div>
        <form>
          <select onchange="buttonColors(this)">

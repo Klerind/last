@@ -7,7 +7,7 @@
        <a href="blog.php">blog</a>
        <ul>
          <li><a href="index.php">Kryesore</a></li>
-         <li><a href="about.php">Rreth Nesh</a></li>
+         <li><a href="about.php">JSON Api</a></li>
          <li><a href="contact.php">Na Kontakto</a></li>
          <li><a href="animate.php">Animate Css</a></li>
           <li><a href="testimonials.php">Testimonials</a></li>

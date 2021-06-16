@@ -1,9 +1,9 @@
 <?php
 //add new article to database from profile page
   include_once 'dbConnection.php';
-  $title = mysqli_real_escape_string($dbConnection,$_POST["title"]);
-  $content = mysqli_real_escape_string($dbConnection,$_POST["content"]);
-  if (isset($_POST["submit"])) {
+  $title = mysqli_real_escape_string($dbConnection,htmlentities($_POST["title"]));
+  $content = mysqli_real_escape_string($dbConnection,htmlentities($_POST["content"]));
+  if (isset($_REQUIRE["submit"])) {
     include_once 'dbConnection.php';
     $mysqli_comand = "INSERT INTO article(title,content,date,time,id)VALUES(?,?,NOW(),NOW(),NULL)";
     $stmt = mysqli_stmt_init($dbConnection);
@@ -14,9 +14,9 @@
     exit();
 }
 //change articles from profile page
-if (isset($_POST["button"])) {
-$newTitle = mysqli_real_escape_string($dbConnection,$_POST["newTitle"]);
-$id = mysqli_real_escape_string($dbConnection,$_POST["id"]);
+if (isset($_REQUIRE["button"])) {
+$newTitle = mysqli_real_escape_string($dbConnection,htmlentities($_REQUIRE["newTitle"]));
+$id = mysqli_real_escape_string($dbConnection,htmlentities($_REQUIRE["id"]));
   include_once 'dbConnection.php';
   if ($title === "") {
       $title = $newTitle;

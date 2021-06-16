@@ -12,6 +12,7 @@ foreach ($dbResult as $result) {
 }
 $json = json_encode($bigData);
 #echo $json;
+/*
 echo $_SERVER['DOCUMENT_ROOT'];
 echo "</br>";
 echo $_SERVER['SERVER_NAME'];
@@ -33,4 +34,19 @@ echo "string";
 echo "</br>";
 echo "</br>";
 echo "</br>";
+*/
+#header("Access-Control-Allow-Origin: *");
+#header("Content-Type: application/json");
+#header("Content-Type: application/vnd.api+json");
+$data = $_REQUEST["data"];
+file_put_contents("../files/contact.txt",$data);
+
+/*print<<<EOF
+<script>
+console.log(1);
+</script>
+EOF;
+?>
+<a href="javascript:alert('hi')">test javascript</a>
+*/
 ?>
